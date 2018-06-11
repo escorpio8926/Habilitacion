@@ -9,9 +9,9 @@
           {{ csrf_field() }}
           <!-- tarea -->
           <div class="form-group">
-            <label for="actividade" class="control-label col-sm-offset-1">Diagrama</label>
+            <label for="actividad" class="control-label col-sm-offset-1">Diagrama</label>
             <div class="input-group col-sm-offset-1 col-sm-10">
-              <input type="text" name="actividade" id="actividade" class="form-control" value="{{ old('actividade') }}" placeholder="nuevo diagrama">
+              <input type="text" name="actividad" id="actividad" class="form-control" value="{{ old('actividad') }}" placeholder="nuevo diagrama">
               <span class="input-group-btn">
                 <button class="btn btn-success" type="submit"><i class="fa fa-btn fa-plus"></i>agregar</button>
               </span>
@@ -39,7 +39,7 @@
                     value="1"
                     onclick="$(this).parent().parent().parent().submit()"
                     >
-                    {{ $t->actividade }}
+                    {{ $t->actividad }}
                   </label>
                 </div>
               </form><!-- /form.modificar -->

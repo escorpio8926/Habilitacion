@@ -9,7 +9,7 @@
 <div class="row">
 	<div class="col-md-12">
 		<div class="search">
-			<form action="/proyectos" method="GET" class="form-horizontal">
+			<form action="/admp/public/proyectos" method="GET" class="form-horizontal">
 				<div class="form-group">
 					<label for="buscar" class="control-label col-sm-offset-1">Proyecto</label>
 					<div class="input-group col-sm-offset-1 col-sm-10">

@@ -125,13 +125,13 @@ class ProyectoController extends Controller
   * @param  int  $id
   * @return Response
   */
-  public function storeActividad(Request $request,$id)
+  public function storeActividade(Request $request,$id)
   {
     $proyecto = Proyecto::findOrFail($id);
-    $actividad = new Actividade();
-    $actividad->actividad = $request->input("actividad");
-		$actividad->completo = false;
-    $proyecto->actividades()->save($actividad);
+    $actividade = new Actividade();
+    $actividade->actividad = $request->input("actividad");
+		$actividade->completo = false;
+    $proyecto->actividades()->save($actividade);
     return redirect()->route('proyectos.show',$id)->with('message', 'Nueva Actividad Guardada!!!');
   }
 
@@ -141,10 +141,10 @@ class ProyectoController extends Controller
   * @param  int  $id
   * @return Response
   */
-  public function destroyActividad($id,$idActividad)
+  public function destroyActividade($id,$idActividade)
   {
-    $actividad=Tarea::findOrFail($idActividad);
-    $actividad->delete();
+    $actividade=Actividade::findOrFail($idActividade);
+    $actividade->delete();
     return redirect()->route('proyectos.show',$id)->with('message', 'Actividad Eliminada!!!');
   }
   /**
@@ -153,11 +153,11 @@ class ProyectoController extends Controller
   * @param  int  $id
   * @return Response
   */
-  public function updateTarea(Request $request,$id,$idActividad)
+  public function updateActividade(Request $request,$id,$idActividade)
   {
-    $actividad=Actividade::findOrFail($idActividad);
-    $actividad->completo=$request->input('completo');
-    $actividad->save();
+    $actividade=Actividade::findOrFail($idActividade);
+    $actividade->completo=$request->input('completo');
+    $actividade->save();
     return redirect()->route('proyectos.show',$id)->with('message', 'Actividad Actualizada!!!');
   }
 }
