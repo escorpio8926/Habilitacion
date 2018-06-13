@@ -30,7 +30,9 @@
               <form class="modificar" action="{{route('proyectos.updateActividade',[$proyecto->id,$t->id])}}" method="POST">
                 {{ csrf_field() }}
                 {{ method_field('PUT') }}
-                <div class="checkbox">
+
+                  <button type="submit" class="checkbox">Crear</button>
+                  <a class="checkbox-link pull-right" href="{{route('proyectos.updateActividade',[$proyecto->id,$t->id])}}"></a>
                   <label>
                     <input
                     type="checkbox"

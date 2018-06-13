@@ -25,6 +25,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/', function () {
+    return view('gantt');
+});
 //por defecto redirigir al listado de proyectos
 Route::get('/', function () {
     return redirect()->route('proyectos.index');
@@ -40,4 +44,6 @@ Route::group(['middleware' => 'auth'], function () {
   Route::delete("proyectos/{proyectos}/actividade/{idActividade}",['as' => 'proyectos.destroyActividade','uses'=>'ProyectoController@destroyActividade']);
   // modifica una tarea el verbo tiene que ser por método put
   Route::put("proyectos/{proyectos}/actividade/{idActividade}",['as' => 'proyectos.updateActividade','uses'=>'ProyectoController@updateActividade']);
+
+
 }); //Route::group(['middleware' => 'auth'], function ()

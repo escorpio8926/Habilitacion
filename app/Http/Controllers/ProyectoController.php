@@ -158,6 +158,6 @@ class ProyectoController extends Controller
     $actividade=Actividade::findOrFail($idActividade);
     $actividade->completo=$request->input('completo');
     $actividade->save();
-    return redirect()->route('proyectos.show',$id)->with('message', 'Actividad Actualizada!!!');
+    return view('gantt');
   }
 }
